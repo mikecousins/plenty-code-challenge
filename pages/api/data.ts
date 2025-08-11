@@ -3,22 +3,22 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { parseCSV, parseJSON } from '../../lib/parse';
 import { join } from 'path';
 
-interface HomePriceInfo {
+export type HomePriceInfo = {
     regionId: string;
     regionName: string;
     homePrice: string;
-}
+};
 
-interface HomeValueForecastInfo {
+export type HomeValueForecastInfo = {
     regionId: string;
     regionName: string;
     oneYearForecast: string;
-}
+};
 
-interface MortgageRateInfo {
+export type MortgageRateInfo = {
     name: string;
     rate: string;
-}
+};
 
 export type Data = {
     homePrices: HomePriceInfo[];
